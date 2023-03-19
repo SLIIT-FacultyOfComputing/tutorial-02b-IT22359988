@@ -29,15 +29,17 @@ printf("Hello World") --> std::cout << "Hello World";
 2.54cm = 1 inch
 
 ```c
-#include <stdio.h>
-void main(void) 
+#include <iostream>
+int main() 
 {
     float cm, inches;
-    printf("Enter a length in cm : ");
-    scanf("%f",&cm);
+    std::cout<<"Enter a length in cm : ";
+     std::cin >>cm;
     inches = cm / 2.54;
-    printf("Length in inches is %f \n", inches);
+      std::cout<<"Length in inches is"  <<" inches";
+    
 }   
+   
 ```
 
 ## Exercise 2 - Selection
@@ -45,7 +47,16 @@ void main(void)
 
 Convert the C program given below which calculates an employee's salary to a C++ program.
 
-
+#include <iostream>
+int main() 
+{
+    float cm, inches;
+    std::cout<<"Enter a length in cm : ";
+     std::cin >>cm;
+    inches = cm / 2.54;
+      std::cout<<"Length in inches is"  <<" inches";
+    
+}   
 Input Type, Salary, otHours
 ```
 Type = 1
@@ -60,34 +71,43 @@ OtRate = 1700
 Please Note that the input command in C++ is std::cin. This is a representation of the Keyboard.
 
 ```c
-#include <stdio.h>
-void main(void)
+#include <iostream>
+int main()
+
 {
    double salary, netSalary;
    int etype, otHrs, otRate;
-   printf("Enter Employee Type : ");
-   scanf("%d", &etype);
-   printf("Enter Salary  : ");
-   scanf("%f", &salary);
-   printf("Enter OtHrs : ");
-   scanf("%d", &otHrs); 
+    std::cout<<"Enter  Employee Type : ";
+    std::cin >>etype;
+    std::cout<<"Enter Salary  : ";
+    std::cin >> salary;
+    std::cout<<"Enter OtHrs : ";
+   std::cin >>otHrs; 
    
-   switch (etype) {
+ 
+    switch (etype) 
+   {
+   
       case 1 :
-          otRate = 1000;
+           std::cout<<"otRate = 1000";
           break;
       case 2 :
-          otRate = 1500;
+            std:: cout<<"otRate = 1500";
           break;
       default :
-          otRate = 1700;
+            std::cout<<" otRate = 1700";
           break;
-   }
-
-
-   netSalary = salary + otHrs* otRate;
-   printf("Net Salary is %f ", netSalary);
+          return 0;
+      }
+        netSalary = salary + otHrs* otRate;
+   std::cout<< "Net Salary is"<< "netSalary";
 }
+    
+   
+   
+
+
+ 
 ```
 
 ## Exercise 3 - Repeatition
@@ -98,21 +118,20 @@ Convert the C program given below which calculates the Factorial of a number tha
 Please Note that the input command in C++ is ```std::cin```. This is a representation of the Keyboard.
 
 ```c
-#include <stdio.h>
-void main(void)
-{
-    int no;
-    long fac;
+#include <iostream>
 
-    printf("Enter a Number : ");
-    scanf("%d", &no);
+long Factorial(int no);
+long nCr(int n, int r);
 
-    fac = 1;
-    for (int r=no; r >= 1; r--) {
-        fac = fac * r;
-    }
-
-    printf("Factorial of %d is %ld\n", no, fac);    
+int main() {
+  int n, r;
+  std::cout << "Enter a value for n ";
+  std::cin >> n;
+  std::cout << "Enter a value for r ";
+  std::cin >> r;
+  std::cout << "nCr = ";
+  std::cout <<" nCr(n,r)";
+  std::cout << std::endl;
 }
 ```
  
@@ -145,7 +164,7 @@ int main() {
   std::cout << "Enter a value for r ";
   std::cin >> r;
   std::cout << "nCr = ";
-  std::cout << nCr(n,r);
+  std::cout <<" nCr(n,r)";
   std::cout << std::endl;
 }
 ```
